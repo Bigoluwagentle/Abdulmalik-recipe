@@ -1,13 +1,17 @@
 import "./Main.css";
 import Cooker from "./img/baba.jpg";
 import Okurin from "./img/okunrin.jpg";
+import { Link } from "react-router-dom";
 function Main(){
+    function recipe(){
+        document.querySelector("#go").click();
+    }
     return(
         <div id="main">
             <nav>
                 <h1>Healthy meals, zero fuss</h1>
                 <p>Discover eight quick, whole-food recipe that you cook tonight no proceessed junk, no guesswork</p>
-                <button>Start exploring</button>
+                <button onClick={recipe}>Start exploring</button>
             </nav>
             <div>
                 <img src={Cooker} alt="" />
@@ -45,8 +49,9 @@ function Main(){
             <summary>
                 <h4>Ready to cook smarter?</h4>
                 <p>Hit the button, pick a recipe and get dinner on the table fast</p>
-                <button>Browse Recipe</button>
+                <button onClick={recipe}>Browse Recipe</button>
             </summary>
+            <Link to="/Recipe" id="go"></Link>
         </div>
     )
 }

@@ -141,7 +141,8 @@
     #main{
         nav{
             > h1{
-                font-size: 35px;
+                font-size: 30px;
+                text-align: center;
             }
             > p{
                 width: 80%;
@@ -161,6 +162,7 @@
         > main{
             flex-direction: column;
             > nav{
+                width: 80%;
                 > p{
                     width: 90%;
                 }

@@ -30,6 +30,7 @@ function Header(){
                     <a href="#" onClick={recipe}>RECIPE</a>
                 </div>
                 <button onClick={recipe}>Browse Recipe</button>
+                <i class="fa-solid fa-bars" style={{marginRight: "20px"}}></i>
             </header>
             <Link to="/Recipe" id="go"></Link>
             <Link to="/" id="home"></Link>

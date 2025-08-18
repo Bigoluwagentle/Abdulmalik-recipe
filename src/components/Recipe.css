@@ -101,6 +101,10 @@
         > article{
             width: 97%;
             margin: 10px;
+            flex-direction: column;
+            > nav{
+                margin-bottom: 50px;
+            }
         }
         .recipe{
             flex-direction: column;

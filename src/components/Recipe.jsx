@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Recipe.css";
+
 const Recipe = () => {
   const [recipes, setRecipes] = useState([]);
 
@@ -8,7 +9,6 @@ const Recipe = () => {
       .then((res) => res.json())
       .then((data) => setRecipes(data.meals));
   }, []);
-
   return (
     <div id="recipe">
       <div id="wrapper">
@@ -39,6 +39,7 @@ const Recipe = () => {
           </div>
         ))}
     </div>
+    
     </div>
     
   );
