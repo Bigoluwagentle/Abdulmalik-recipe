@@ -29,8 +29,8 @@ function Header(){
                     <a href="#">ABOUT</a>
                     <a href="#" onClick={recipe}>RECIPE</a>
                 </div>
+                <button onClick={Home} id="mobile">HOME</button>
                 <button onClick={recipe}>Browse Recipe</button>
-                <i class="fa-solid fa-bars" style={{marginRight: "20px"}}></i>
             </header>
             <Link to="/Recipe" id="go"></Link>
             <Link to="/" id="home"></Link>
