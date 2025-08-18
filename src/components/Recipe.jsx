@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Recipe.css";
 
 const Recipe = () => {
@@ -9,39 +10,27 @@ const Recipe = () => {
       .then((res) => res.json())
       .then((data) => setRecipes(data.meals));
   }, []);
+
   return (
     <div id="recipe">
       <div id="wrapper">
         <h2>Explore our simple, healthy recipes</h2>
-        <p>Discover eight quick, whole-food dishes that fit real-life schedule and taste amazing. Use the search bar to find a recipe by name or ingrdients, or simply scroll the list and let something delicious catch your eye.</p>
+        <p>Discover eight quick, whole-food recipe that you cook tonight no proceessed junk, no guesswork</p>
       </div>
-      <article>
-        <nav>
-          <p>Max Prep Time<i class="fa-solid fa-arrow-down"></i></p>
-          <p>Mx Cook Time<i class="fa-solid fa-arrow-down"></i></p>
-        </nav>
-        <nav>
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="search" placeholder="Search by name or ingredients" />
-        </nav>
-      </article>
+      
       <div className="recipe">
         {recipes.map((meal) => (
           <div key={meal.idMeal} className="wrapper">
-            <img
-              src={meal.strMealThumb}
-              alt={meal.strMeal}
-            />
+            <img src={meal.strMealThumb} alt={meal.strMeal} />
             <h2>{meal.strMeal}</h2>
-            <button>
-              View Recipe
-            </button>
+            {/* Navigate to /recipe/:id */}
+            <Link to={`/recipe/${meal.idMeal}`}>
+              <button>View Recipe</button>
+            </Link>
           </div>
         ))}
+      </div>
     </div>
-    
-    </div>
-    
   );
 };
 
